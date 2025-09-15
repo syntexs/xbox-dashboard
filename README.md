@@ -1,5 +1,5 @@
 # Xbox Dashboard Replica
-
+https://syntexs.github.io/xbox-dashboard/
 A faithful recreation of the first-generation Xbox console dashboard, built with modern web technologies. This project captures the authentic look, feel, and functionality of the original Xbox dashboard with its distinctive green theme and retro gaming aesthetic.
 
 ## Features

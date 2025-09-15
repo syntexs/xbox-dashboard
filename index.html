@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="xbox-dashboard">
+        <!-- Header with Xbox Logo -->
+        <header class="dashboard-header">
+            <div class="xbox-logo">
+                <span class="xbox-text">XBOX</span>
+            </div>
+            <div class="header-info">
+                <div class="clock" id="clock">12:00 AM</div>
+                <div class="memory-info">Memory: 8GB</div>
+            </div>
+        </header>
+
+        <!-- Main Navigation Tabs -->
+        <nav class="main-nav">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="home">
+                    <span class="tab-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ff00" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9,22 9,12 15,12 15,22" />
+                        </svg>
+                    </span>
+                    <span class="tab-text">Home</span>
+                </button>
+                <button class="nav-tab" data-tab="games">
+                    <span class="tab-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ff00" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </span>
+                    <span class="tab-text">Games</span>
+                </button>
+                <button class="nav-tab" data-tab="music">
+                    <span class="tab-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ff00" stroke-width="2">
+                            <path d="M9 18V5l12-2v13" />
+                            <circle cx="6" cy="18" r="3" />
+                            <circle cx="18" cy="16" r="3" />
+                        </svg>
+                    </span>
+                    <span class="tab-text">Music</span>
+                </button>
+                <button class="nav-tab" data-tab="videos">
+                    <span class="tab-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ff00" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7" />
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                        </svg>
+                    </span>
+                    <span class="tab-text">Videos</span>
+                </button>
+                <button class="nav-tab" data-tab="settings">
+                    <span class="tab-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ff00" stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg>
+                    </span>
+                    <span class="tab-text">Settings</span>
+                </button>
+                <button class="nav-tab" data-tab="system">
+                    <span class="tab-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ff00" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                            <circle cx="12" cy="10" r="2" />
+                        </svg>
+                    </span>
+                    <span class="tab-text">System</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Home Tab Content -->
+            <div class="tab-content active" id="home">
+                <div class="home-container">
+                    <div class="home-header">
+                        <h1 class="home-title">XBOX</h1>
+                        <p class="home-subtitle">Welcome to the Future of Gaming</p>
+                    </div>
+
+                    <!-- Abstract Animation Container -->
+                    <div class="abstract-animation">
+                        <!-- Floating Orbs -->
+                        <div class="floating-orb orb-1"></div>
+                        <div class="floating-orb orb-2"></div>
+                        <div class="floating-orb orb-3"></div>
+                        <div class="floating-orb orb-4"></div>
+                        <div class="floating-orb orb-5"></div>
+                        <div class="floating-orb orb-6"></div>
+
+                        <!-- Geometric Shapes -->
+                        <div class="geometric-shape triangle-1"></div>
+                        <div class="geometric-shape triangle-2"></div>
+                        <div class="geometric-shape square-1"></div>
+                        <div class="geometric-shape square-2"></div>
+                        <div class="geometric-shape hexagon-1"></div>
+                        <div class="geometric-shape hexagon-2"></div>
+
+                        <!-- Energy Lines -->
+                        <div class="energy-line line-1"></div>
+                        <div class="energy-line line-2"></div>
+                        <div class="energy-line line-3"></div>
+                        <div class="energy-line line-4"></div>
+
+                        <!-- Pulse Rings -->
+                        <div class="pulse-ring ring-1"></div>
+                        <div class="pulse-ring ring-2"></div>
+                        <div class="pulse-ring ring-3"></div>
+
+                        <!-- Matrix Rain Effect -->
+                        <div class="matrix-rain">
+                            <div class="matrix-column"></div>
+                            <div class="matrix-column"></div>
+                            <div class="matrix-column"></div>
+                            <div class="matrix-column"></div>
+                            <div class="matrix-column"></div>
+                            <div class="matrix-column"></div>
+                            <div class="matrix-column"></div>
+                            <div class="matrix-column"></div>
+                        </div>
+                    </div>
+
+                    <div class="home-info">
+                        <div class="info-card">
+                            <h3>System Status</h3>
+                            <p>All systems operational</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Memory</h3>
+                            <p>8GB Available</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Controller</h3>
+                            <p>Connected</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Games Tab Content -->
+            <div class="tab-content" id="games">
+                <div class="content-header">
+                    <h2>My Games</h2>
+                    <div class="content-actions">
+                        <button class="action-btn">Play</button>
+                        <button class="action-btn">Copy</button>
+                        <button class="action-btn">Delete</button>
+                    </div>
+                </div>
+                <div class="games-grid">
+                    <div class="game-item">
+                        <div class="game-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                                <circle cx="12" cy="10" r="2" />
+                            </svg>
+                        </div>
+                        <div class="game-title">Halo: Combat Evolved</div>
+                        <div class="game-info">Action • 1.2GB</div>
+                    </div>
+                    <div class="game-item">
+                        <div class="game-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <path
+                                    d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9L18 10l-1.5 1.1c-.8.2-1.5 1-1.5 1.9v3c0 .6.4 1 1 1h2z" />
+                                <path
+                                    d="M13 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9L12 10l-1.5 1.1c-.8.2-1.5 1-1.5 1.9v3c0 .6.4 1 1 1h2z" />
+                                <path
+                                    d="M7 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9L6 10l-1.5 1.1c-.8.2-1.5 1-1.5 1.9v3c0 .6.4 1 1 1h2z" />
+                                <path d="M3 12h18" />
+                            </svg>
+                        </div>
+                        <div class="game-title">Project Gotham Racing</div>
+                        <div class="game-info">Racing • 980MB</div>
+                    </div>
+                    <div class="game-item">
+                        <div class="game-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5" />
+                                <path d="M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div class="game-title">Fable</div>
+                        <div class="game-info">RPG • 1.5GB</div>
+                    </div>
+                    <div class="game-item">
+                        <div class="game-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                                <line x1="9" y1="9" x2="9.01" y2="9" />
+                                <line x1="15" y1="9" x2="15.01" y2="9" />
+                            </svg>
+                        </div>
+                        <div class="game-title">NBA 2K2</div>
+                        <div class="game-info">Sports • 800MB</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Music Tab Content -->
+            <div class="tab-content" id="music">
+                <div class="content-header">
+                    <h2>My Music</h2>
+                    <div class="content-actions">
+                        <button class="action-btn">Play</button>
+                        <button class="action-btn">Copy</button>
+                        <button class="action-btn">Delete</button>
+                    </div>
+                </div>
+                <div class="music-list">
+                    <div class="music-item">
+                        <div class="music-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <path d="M9 18V5l12-2v13" />
+                                <circle cx="6" cy="18" r="3" />
+                                <circle cx="18" cy="16" r="3" />
+                            </svg>
+                        </div>
+                        <div class="music-info">
+                            <div class="music-title">Custom Soundtrack</div>
+                            <div class="music-details">Various Artists • 45 tracks</div>
+                        </div>
+                    </div>
+                    <div class="music-item">
+                        <div class="music-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </div>
+                        <div class="music-info">
+                            <div class="music-title">CD Audio</div>
+                            <div class="music-details">Insert CD to play</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Videos Tab Content -->
+            <div class="tab-content" id="videos">
+                <div class="content-header">
+                    <h2>My Videos</h2>
+                    <div class="content-actions">
+                        <button class="action-btn">Play</button>
+                        <button class="action-btn">Copy</button>
+                        <button class="action-btn">Delete</button>
+                    </div>
+                </div>
+                <div class="videos-grid">
+                    <div class="video-item">
+                        <div class="video-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <polygon points="23 7 16 12 23 17 23 7" />
+                                <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                            </svg>
+                        </div>
+                        <div class="video-title">Gameplay Recording</div>
+                        <div class="video-info">Halo • 2.3GB</div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                                <circle cx="12" cy="10" r="2" />
+                            </svg>
+                        </div>
+                        <div class="video-title">DVD Video</div>
+                        <div class="video-info">Insert DVD to play</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Tab Content -->
+            <div class="tab-content" id="settings">
+                <div class="content-header">
+                    <h2>Settings</h2>
+                </div>
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <div class="setting-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                                <circle cx="12" cy="10" r="2" />
+                            </svg>
+                        </div>
+                        <div class="setting-info">
+                            <div class="setting-title">Controller</div>
+                            <div class="setting-description">Configure controller settings</div>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+                            </svg>
+                        </div>
+                        <div class="setting-info">
+                            <div class="setting-title">Audio</div>
+                            <div class="setting-description">Audio and sound settings</div>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                        </div>
+                        <div class="setting-info">
+                            <div class="setting-title">Display</div>
+                            <div class="setting-description">Video and display settings</div>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                        </div>
+                        <div class="setting-info">
+                            <div class="setting-title">Network</div>
+                            <div class="setting-description">Network and internet settings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Tab Content -->
+            <div class="tab-content" id="system">
+                <div class="content-header">
+                    <h2>System</h2>
+                </div>
+                <div class="system-info">
+                    <div class="system-item">
+                        <div class="system-label">Xbox Version:</div>
+                        <div class="system-value">1.0</div>
+                    </div>
+                    <div class="system-item">
+                        <div class="system-label">Dashboard Version:</div>
+                        <div class="system-value">5960</div>
+                    </div>
+                    <div class="system-item">
+                        <div class="system-label">Memory:</div>
+                        <div class="system-value">8GB</div>
+                    </div>
+                    <div class="system-item">
+                        <div class="system-label">Hard Drive:</div>
+                        <div class="system-value">8GB</div>
+                    </div>
+                    <div class="system-item">
+                        <div class="system-label">Serial Number:</div>
+                        <div class="system-value">XBOX-001234</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer with Status Info -->
+        <footer class="dashboard-footer">
+            <div class="footer-left">
+                <span class="status-indicator online">●</span>
+                <span>Controller 1 Connected</span>
+            </div>
+            <div class="footer-right">
+                <span>Press A to select • Press B to go back</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
